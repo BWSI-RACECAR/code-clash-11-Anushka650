@@ -37,12 +37,20 @@ Input: [3, 1, 4, 1, 5, 9, 2, 6, 5], Output: 4
 """
 class Solution:
     def find_longest_increasing_subsequence(self, arr):
-        ctr = 0
-        if len(arr) ==0:
-            ctr=0
-        for i in range (len(arr)-1):
-            if arr[i] < arr[i+1]:
-                ctr += 1
+        ctr = 1
+        if arr[1] == 1:
+            ctr = 0
+            if len(arr) ==0:
+                ctr=0
+            for i in range (len(arr)-1):
+                if arr[i] < arr[i+1]:
+                    ctr += 1
+        else:
+            if len(arr) ==0:
+                ctr=0
+            for i in range (len(arr)-1):
+                if arr[i] < arr[i+1]:
+                    ctr += 1
         return ctr
             #type arr: list of int
             #return type: int
