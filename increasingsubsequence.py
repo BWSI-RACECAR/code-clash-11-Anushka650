@@ -41,14 +41,12 @@ class Solution:
         for i in range (len(arr)):
             if arr[i] < arr[i+1]:
                 ctr += 1
-            else:
-                ctr = 1
         return ctr
             #type arr: list of int
             #return type: int
 
             #TODO: Write code below to return an int with the solution to the prompt.
-        
+
 
 def main():
     array = input().split(" ")
